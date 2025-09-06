@@ -1,18 +1,10 @@
-# Use official Python base image
-FROM python:3.10-slim
+FROM python:3.11-slim
 
-# Set workdir
 WORKDIR /app
-
-# Install dependencies
-COPY requirements.txt .
+COPY app/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy source code
-COPY . .
+COPY app/ .
 
-# Expose port
-EXPOSE 8080
-
-# Run app
+EXPOSE 5000
 CMD ["python", "app.py"]
