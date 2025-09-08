@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "i am from Tekton Python CI/CD!"
+    return "hi,i am from Tekton Python CI/CD!"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
